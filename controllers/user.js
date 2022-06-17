@@ -42,7 +42,7 @@ class UserController {
   }
 
   static getAll = asyncHandler(async (req, res) => {
-    const data = User.find()
+    const data = await User.find()
     res.json(data)
   })
 }
